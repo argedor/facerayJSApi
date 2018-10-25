@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FACERAY TEST</title>
+<script src="http://159.69.86.20/facerayApi/js/faceray.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	faceray.apiKey = '1';
+	faceray.apiId = '1';
+	faceray.init();
+	faceray.client().then(function(client){
+				client.faceDetect('https://100lclive.s3.amazonaws.com/img/ideas/blog-full/165933.jpg');
+			}).catch(function(response){
+				alert(response);
+			});
+</script>
+</body>
+</html>
